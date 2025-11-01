@@ -1,51 +1,87 @@
-# User Auth API (Node.js + Express + MongoDB)
+# User Authentication API  
+A simple and secure RESTful API for user registration, login, and profile management.  
+Built with **Node.js**, **Express**, **MongoDB Atlas**, and **JWT**.
 
-Simple authentication API using Node.js, Express, MongoDB, bcrypt and JWT.
-Suitable for adding to your GitHub as a strong backend sample for internship applications.
+## 🚀 Overview  
+This project implements a clean and scalable back-end authentication system.  
+It includes essential features found in real-world applications, such as:
 
-## Features
-- Register (hash passwords with bcrypt)
-- Login (JWT issuance)
-- Protected profile route (requires `Authorization: Bearer <token>`)
+- ✅ User Registration  
+- ✅ Secure Password Hashing (bcryptjs)  
+- ✅ User Login  
+- ✅ JWT Authentication  
+- ✅ Protected Profile Route  
+- ✅ MongoDB Atlas Cloud Integration  
+- ✅ Modular MVC Folder Structure  
 
-## Quick start (local)
-1. Copy `.env.example` to `.env` and set values:
-   - `MONGODB_URI` (e.g., mongodb://localhost:27017/user_auth_db)
-   - `JWT_SECRET` (a long random string)
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Start server:
-   ```bash
-   npm run dev    # requires nodemon (dev)
-   # or
-   npm start
-   ```
-4. Test with Postman or curl:
-   - Register: POST /api/auth/register
-   - Login: POST /api/auth/login
-   - Profile: GET /api/profile/ (set Authorization header)
+## 🛠️ Tech Stack
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Mongoose
+- JWT
+- bcryptjs
+- dotenv
 
-## Example requests
-Register body (JSON):
-```json
-{
-  "name": "Mahmoud",
-  "email": "mahmoud@example.com",
-  "password": "StrongPassword123"
-}
-```
+## 📁 Project Structure
+/models  
+&nbsp;&nbsp;&nbsp;&nbsp;user.js  
+/routes  
+&nbsp;&nbsp;&nbsp;&nbsp;auth.js  
+&nbsp;&nbsp;&nbsp;&nbsp;profile.js  
+server.js  
+.env.example  
+package.json  
+README.md  
 
-Login body (JSON):
-```json
-{
-  "email": "mahmoud@example.com",
-  "password": "StrongPassword123"
-}
-```
+## ⚙️ Installation & Setup
 
-## What to add before pushing to GitHub
-- Replace `JWT_SECRET` with a strong secret in `.env` (do NOT commit `.env`).
-- Add a short screenshot of Postman responses (optional but recommended).
-- Update `README.md` with your GitHub link and short explanation of your role.
+### 1. Clone the repository
+git clone https://github.com/YourUsername/user_auth_api.git
+cd user_auth_api
+
+shell
+نسخ الكود
+
+### 2. Install dependencies
+npm install
+
+shell
+نسخ الكود
+
+### 3. Create a `.env` file
+MONGO_URI=your_mongodb_atlas_connection_string
+JWT_SECRET=your_secret_key
+PORT=5000
+
+shell
+نسخ الكود
+
+### 4. Run the server
+npm start
+
+yaml
+نسخ الكود
+
+You should see:
+Server running on port 5000
+Connected to MongoDB
+
+shell
+نسخ الكود
+
+## 🔐 API Endpoints
+
+### POST /api/auth/register  
+Create a new user.
+
+### POST /api/auth/login  
+Authenticate user and return JWT.
+
+### GET /api/profile  
+Get user profile (requires Bearer Token).
+
+## 🧑‍💻 Author  
+**Mahmoud Yaseen**  
+Back-End Developer  
+GitHub: https://github.com/Abo-AL-Yaseen
