@@ -40,35 +40,31 @@ README.md
 git clone https://github.com/YourUsername/user_auth_api.git
 cd user_auth_api
 
-shell
-نسخ الكود
+
+
 
 ### 2. Install dependencies
 npm install
 
-shell
-نسخ الكود
+
 
 ### 3. Create a `.env` file
 MONGO_URI=your_mongodb_atlas_connection_string
 JWT_SECRET=your_secret_key
 PORT=5000
 
-shell
-نسخ الكود
+
 
 ### 4. Run the server
 npm start
 
-yaml
-نسخ الكود
+
 
 You should see:
 Server running on port 5000
 Connected to MongoDB
 
-shell
-نسخ الكود
+
 
 ## 🔐 API Endpoints
 
